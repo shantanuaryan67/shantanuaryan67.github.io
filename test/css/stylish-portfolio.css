@@ -4,6 +4,10 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-stylish-portfolio/blob/master/LICENSE)
  */
 
+:root {
+    --customcolor: #00b0ff;
+}
+
 body,
 html {
   width: 100%;
@@ -93,13 +97,13 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/cody-davis-253928-unsplash.jpg");
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/cody-davis-253928-unsplash.jpg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/head transp.png");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/head transp.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: hsl(14.3,45.7%,82%);
-  background-blend-mode: multiply;
+  background-color: var(--customcolor);
+  /*background-blend-mode: multiply;*/
 }
 
 .masthead h1 {
@@ -303,7 +307,7 @@ h6 {
     clip-path: inset(2rem);
   }
   .portfolio-item:hover .caption {
-    background-color: rgba(29, 128, 159, 0.9);
+    background-color: var(--customcolor);/*add opacity*/
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
   }
@@ -379,7 +383,7 @@ a:hover, a:focus, a:active {
 }
 
 .text-primary {
-  color: #1D809F !important;
+  color: var(--customcolor) !important;
 }
 
 .text-secondary {

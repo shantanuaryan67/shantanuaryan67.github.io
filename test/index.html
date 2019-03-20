@@ -26,21 +26,43 @@
 <body id="page-top">
       
   <script type="text/javascript">
-    var clicks = 267;
-    var possible = "0123456789ABCDEF";
-    function clicker() {
-        if (clicks<255) {
-            clicks += 1;
-            document.getElementById("clicks").innerHTML = 'shantanuaryan'+clicks;
-        } else {
-            clicks=''
-            for (var i = 0; i < 6; i++){
-             clicks += possible.charAt(Math.floor(Math.random() * possible.length));
-            }
-            document.getElementById("clicks").innerHTML = '0x'+clicks;
-            document.getElementById('colorme').style.backgroundColor = '#'+clicks;
-        }
-    };
+      var possible = "0123456789ABCDEF";
+      function clickCounter() {
+          if (typeof(Storage) !== "undefined") {
+              if (localStorage.clickcount) {
+                  if (Number(localStorage.clickcount)<255){
+                      localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                      document.getElementById("clicks").innerHTML = "shantanuaryan" + localStorage.clickcount;
+                  } else {
+                      localStorage.colorcount=''
+                      for (var i = 0; i < 6; i++){
+                          localStorage.colorcount += possible.charAt(Math.floor(Math.random() * possible.length));
+                      }
+                      localStorage.colorcount = '#' + localStorage.colorcount;
+                      document.documentElement.style.setProperty('--customcolor', localStorage.colorcount);
+                  }
+              } else {
+                  localStorage.clickcount = 67;
+              }
+          } else {
+              document.getElementById("clicks").innerHTML = "shantanuaryan67";
+          }
+      }
+  </script>
+
+  <script type="text/javascript">
+      function colorChanger() {
+          if (typeof(Storage) !== "undefined") {
+              if (localStorage.colorcount) {
+                  document.documentElement.style.setProperty('--customcolor', localStorage.colorcount);
+              } else {
+                  localStorage.colorcount = '#00b0ff';
+                  document.documentElement.style.setProperty('--customcolor', localStorage.colorcount);
+              }
+          } else {
+              document.documentElement.style.setProperty('--customcolor', '#00b0ff');
+          }
+      }  
   </script>
 
   <!-- Navigation -->
@@ -62,13 +84,13 @@
   </nav>
     
   <!-- Header -->
-  <header id="colorme" class="masthead d-flex" style="">
+  <header class="masthead d-flex" onload="colorChanger()">
     <div class="container text-center my-auto">
       <h1 class="mb-1" id="clicks">shantanuaryan67</h1>
       <h3 class="mb-5">
       <em>:)</em>
       </h3>
-      <a class="btn btn-primary btn-light btn-xl js-scroll-trigger" onClick="clicker()" href="#"><span class="label label-default"> + 1 </span></a>
+      <a class="btn btn-primary btn-light btn-xl js-scroll-trigger" onClick="clickCounter()" href="#"><span class="label label-default"> + 1 </span></a>
     </div>
     <div class="overlay"></div>
   </header>
@@ -77,7 +99,7 @@
   <section class="content-section" id="portfolio">
     <div class="container">
       <div class="content-section-heading text-center">
-        <h3 class="text-secondary mb-0">Portfolio</h3>
+        <h3 class="text-primary mb-0">Portfolio</h3>
         <h2 class="mb-5">Recent Projects</h2>
       </div>
       <div class="row no-gutters">
