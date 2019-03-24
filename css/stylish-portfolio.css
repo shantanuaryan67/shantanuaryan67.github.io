@@ -5,7 +5,7 @@
  */
 
 :root {
-    --customcolor: #00b0ff;
+    --customcolor: colorgen();
 }
 
 body,
@@ -72,17 +72,18 @@ h6 {
   width: 50px;
   height: 50px;
   text-align: center;
-  color: white;
-  background: rgba(52, 58, 64, 0.5);
+  color: #fff;
+  background: #777;
+  mix-blend-mode: luminosity;
   line-height: 45px;
 }
 
 .scroll-to-top:focus, .scroll-to-top:hover {
-  color: white;
+  color: #fff;
 }
 
 .scroll-to-top:hover {
-  background: #343a40;
+  background: #333;
 }
 
 .scroll-to-top i {
