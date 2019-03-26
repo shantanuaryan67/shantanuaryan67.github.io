@@ -19,7 +19,7 @@ body {
 }
 
 .btn-xl {
-  padding: 1.25rem 2.5rem;
+    padding: 1rem 2rem;
 }
 
 .content-section {
@@ -95,7 +95,7 @@ h6 {
   position: relative;
   display: table;
   width: 100%;
-  height: auto;
+  height: 100vh;
   padding-top: 8rem;
   padding-bottom: 8rem;
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/head transp.png");
@@ -112,8 +112,8 @@ h6 {
   font-size: 4rem;
   margin: auto;
   padding: 0;
-  color: #aaa;
-  mix-blend-mode: multiply;
+  color: #222;
+  mix-blend-mode: luminosity;
 }
 
 @media (min-width: 992px) {
@@ -334,7 +334,7 @@ footer.footer .social-link {
   line-height: 4.3rem;
   font-size: 1.5rem;
   background-color: var(--customcolor);
-  opacity: 0.7;
+  opacity: 0.85;
   -webkit-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
   -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -386,11 +386,11 @@ a:hover, a:focus, a:active {
 .btn {
   -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .bg-primary {
-  background-color: #1D809F !important;
+  background-color: var(--customcolor) !important;
 }
 
 .text-primary {
