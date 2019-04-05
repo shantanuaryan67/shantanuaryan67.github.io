@@ -8,6 +8,16 @@
     --customcolor: #000;
 }
 
+@font-face {
+  font-family: bangers;
+  src: url(fonts/Bangers.ttf);
+}
+
+.banger {
+  font-family: bangers;
+  font-stretch: ultra-expanded;
+}
+
 body,
 html {
   width: 100%;
@@ -127,7 +137,7 @@ h6 {
 
 @media (max-width: 600px) {
   .masthead h1 {
-    font-size: 10vw;
+    font-size: 10.8vw;
   }
 }
 
