@@ -10,6 +10,7 @@
 
 @font-face {
   font-family: bangers;
+  src: url(fonts/Bangers.woff);
   src: url(fonts/Bangers.ttf);
 }
 
