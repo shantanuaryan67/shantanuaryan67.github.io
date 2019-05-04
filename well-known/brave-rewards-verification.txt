@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: shantanuaryan67.github.io
+Token: 460fc873d80e53f397785d4f940c0374e086e94aa3de45e64a95a4f90212d82b
