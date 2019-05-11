@@ -97,9 +97,10 @@
   </script>
     
   <script type="text/javascript">
-      function themechanger(acolor) {
+      function themechanger() {
           var metaThemeColor = document.querySelector("meta[name=theme-color]");
-          metaThemeColor.setAttribute("content",acolor);
+          //metaThemeColor.setAttribute("content",getcolorvalue());
+          metaThemeColor.content=getcolorvalue();
       }  
   </script>
 
