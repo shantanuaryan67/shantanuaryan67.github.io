@@ -123,8 +123,8 @@ h6 {
   font-size: 4rem;
   margin: auto;
   padding: 0;
-  color: #222;
-  mix-blend-mode: luminosity;
+  color: #000;
+  mix-blend-mode: overlay;
 }
 
 @media (min-width: 992px) {
