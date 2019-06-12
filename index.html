@@ -43,7 +43,7 @@
                   } else {
                       localStorage.colorcount = colorgen();
                       document.documentElement.style.setProperty('--customcolor', localStorage.colorcount);
-                      themechanger(getcolorvalue());
+                      themechanger();
                   }
               } else {
                   localStorage.clickcount = 68;
@@ -86,7 +86,7 @@
           localStorage.clear();
           document.documentElement.style.setProperty('--customcolor', colorgen());
           document.getElementById("clicks").innerHTML = "shantanuaryan67";
-          themechanger(getcolorvalue());
+          themechanger();
       }  
   </script>
     
