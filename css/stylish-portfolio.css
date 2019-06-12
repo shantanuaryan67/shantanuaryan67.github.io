@@ -14,9 +14,18 @@
   src: url(fonts/Bangers.ttf);
 }
 
+@font-face {
+  font-family: cools;
+  src: url(fonts/CoolS.otf);
+}
+
 .banger {
   font-family: bangers;
   font-stretch: ultra-expanded;
+}
+
+.cool {
+  font-family: cools;
 }
 
 body,

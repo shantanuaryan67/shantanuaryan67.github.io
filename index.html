@@ -77,7 +77,7 @@
           } else {
               document.documentElement.style.setProperty('--customcolor', colorgen());
           }
-          themechanger(getcolorvalue());
+          themechanger();
       }  
   </script>
 
@@ -99,8 +99,8 @@
   <script type="text/javascript">
       function themechanger() {
           var metaThemeColor = document.querySelector("meta[name=theme-color]");
-          //metaThemeColor.setAttribute("content",getcolorvalue());
-          metaThemeColor.content=getcolorvalue();
+          metaThemeColor.setAttribute("content",getcolorvalue());
+          //metaThemeColor.content=getcolorvalue();
       }  
   </script>
 
@@ -136,7 +136,7 @@
     <div class="container">
       <div class="content-section-heading text-center">
         <h3 class="text-primary mb-0">Portfolio</h3>
-        <h2 class="mb-5 banger">Recent Projects</h2>
+        <h2 class="mb-5 cool">Recent Projects</h2>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6">
