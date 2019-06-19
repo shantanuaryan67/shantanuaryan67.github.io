@@ -13,7 +13,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="#000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
+
   <link rel="icon" sizes="192x192" href="ico.png">
 
   <title>shantanuaryan67</title>
@@ -25,14 +25,15 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bangers|Fredoka+One|Indie+Flower|Kaushan+Script|Luckiest+Guy|Permanent+Marker|Righteous|Varela+Round|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.css" rel="stylesheet">
 
 </head>
 
-<body id="page-top" onload="colorChanger()">
-      
+<body id="page-top" onload="colorChanger();">
+
   <script type="text/javascript">
       function clickCounter() {
           if (typeof(Storage) !== "undefined") {
@@ -51,10 +52,12 @@
               }
           } else {
               document.getElementById("clicks").innerHTML = "shantanuaryan67";
+              document.documentElement.style.setProperty('--customcolor', colorgen());
+              themechanger();
           }
       }
   </script>
-    
+
   <script type="text/javascript">
       function colorgen() {
           var possible = "0123456789ABCDEF";
@@ -63,9 +66,9 @@
               cg += possible.charAt(Math.floor(Math.random() * possible.length));
           }
           return cg;
-      }  
+      }
   </script>
-    
+
   <script type="text/javascript">
       function colorChanger() {
           if (typeof(Storage) !== "undefined") {
@@ -78,7 +81,7 @@
               document.documentElement.style.setProperty('--customcolor', colorgen());
           }
           themechanger();
-      }  
+      }
   </script>
 
   <script type="text/javascript">
@@ -87,22 +90,22 @@
           document.documentElement.style.setProperty('--customcolor', colorgen());
           document.getElementById("clicks").innerHTML = "shantanuaryan67";
           themechanger();
-      }  
+      }
   </script>
-    
+
   <script type="text/javascript">
       function getcolorvalue() {
           //return document.documentElement.style.getProperty('--customcolor');
           return getComputedStyle(document.documentElement).getPropertyValue('--customcolor');
       }
   </script>
-    
+
   <script type="text/javascript">
       function themechanger() {
           var metaThemeColor = document.querySelector("meta[name=theme-color]");
           metaThemeColor.setAttribute("content", getcolorvalue());
           //metaThemeColor.content=getcolorvalue();
-      }  
+      }
   </script>
 
   <!-- Navigation -->
@@ -122,7 +125,7 @@
       </li>
     </ul>
   </nav>
-    
+
   <!-- Header -->
   <header class="masthead d-flex">
     <div class="container text-center my-auto">

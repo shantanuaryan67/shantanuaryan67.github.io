@@ -8,7 +8,7 @@
     --customcolor: #000;
 }
 
-@font-face {
+/*@font-face {
   font-family: bangers;
   src: url(fonts/Bangers.woff);
   src: url(fonts/Bangers.ttf);
@@ -17,15 +17,15 @@
 @font-face {
   font-family: cools;
   src: url(fonts/CoolS.otf);
-}
+}*/
 
 .banger {
-  font-family: bangers;
+  font-family: 'Righteous', cursive;
   font-stretch: ultra-expanded;
 }
 
 .cool {
-  font-family: cools;
+  font-family: 'Permanent Marker', cursive;
 }
 
 body,
@@ -111,29 +111,29 @@ h6 {
 }
 
 .masthead {
-  min-height: 30rem;
+  min-height: 25rem;
   position: relative;
   display: table;
   width: 100%;
   height: 100vh;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/head transp.png");
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/head transp.png");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/banner.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/banner.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-color: var(--customcolor);
-  /*background-blend-mode: multiply;*/
+  background-blend-mode: luminosity;
 }
 
 .masthead h1 {
   font-size: 4rem;
   margin: auto;
   padding: 0;
-  color: #000;
-  mix-blend-mode: overlay;
+  color: #cdcdcd;
+  mix-blend-mode: luminosity;
 }
 
 @media (min-width: 992px) {
@@ -147,7 +147,7 @@ h6 {
 
 @media (max-width: 600px) {
   .masthead h1 {
-    font-size: 10.8vw;
+    font-size: 10vw;
   }
 }
 
@@ -258,8 +258,8 @@ h6 {
   padding: 5rem 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/bg-callout.jpg");
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-callout.jpg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1))), url("../img/bg-callout.jpeg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-callout.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -376,14 +376,14 @@ a:hover, a:focus, a:active {
 }
 
 .btn-primary {
-  background-color: #777 !important;
-  mix-blend-mode: luminosity;
+  background-color: var(--customcolor) !important;
+  mix-blend-mode: multiply;
   border-color: #777 !important;
   color: #fff !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #333 !important;
+  background-color: #cdcdcd !important;
   border-color: #333 !important;
   mix-blend-mode: luminosity;
 }
