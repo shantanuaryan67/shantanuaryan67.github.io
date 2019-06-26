@@ -34,80 +34,6 @@
 
 <body id="page-top" onload="colorChanger();">
 
-  <script type="text/javascript">
-      function clickCounter() {
-          if (typeof(Storage) !== "undefined") {
-              if (localStorage.clickcount) {
-                  if (Number(localStorage.clickcount)<255){
-                      localStorage.clickcount = Number(localStorage.clickcount) + 1;
-                      document.getElementById("clicks").innerHTML = "shantanuaryan" + localStorage.clickcount;
-                  } else {
-                      localStorage.colorcount = colorgen();
-                      document.documentElement.style.setProperty('--customcolor', localStorage.colorcount);
-                      themechanger();
-                  }
-              } else {
-                  localStorage.clickcount = 68;
-                  document.getElementById("clicks").innerHTML = "shantanuaryan" + localStorage.clickcount;
-              }
-          } else {
-              document.getElementById("clicks").innerHTML = "shantanuaryan67";
-              document.documentElement.style.setProperty('--customcolor', colorgen());
-              themechanger();
-          }
-      }
-  </script>
-
-  <script type="text/javascript">
-      function colorgen() {
-          var possible = "0123456789ABCDEF";
-          var cg='#'
-          for (var i = 0; i < 6; i++){
-              cg += possible.charAt(Math.floor(Math.random() * possible.length));
-          }
-          return cg;
-      }
-  </script>
-
-  <script type="text/javascript">
-      function colorChanger() {
-          if (typeof(Storage) !== "undefined") {
-              if (localStorage.colorcount) {
-                  document.documentElement.style.setProperty('--customcolor', localStorage.colorcount);
-              } else {
-                  document.documentElement.style.setProperty('--customcolor', colorgen());
-              }
-          } else {
-              document.documentElement.style.setProperty('--customcolor', colorgen());
-          }
-          themechanger();
-      }
-  </script>
-
-  <script type="text/javascript">
-      function reset() {
-          localStorage.clear();
-          document.documentElement.style.setProperty('--customcolor', colorgen());
-          document.getElementById("clicks").innerHTML = "shantanuaryan67";
-          themechanger();
-      }
-  </script>
-
-  <script type="text/javascript">
-      function getcolorvalue() {
-          //return document.documentElement.style.getProperty('--customcolor');
-          return getComputedStyle(document.documentElement).getPropertyValue('--customcolor');
-      }
-  </script>
-
-  <script type="text/javascript">
-      function themechanger() {
-          var metaThemeColor = document.querySelector("meta[name=theme-color]");
-          metaThemeColor.setAttribute("content", getcolorvalue());
-          //metaThemeColor.content=getcolorvalue();
-      }
-  </script>
-
   <!-- Navigation -->
   <a class="menu-toggle rounded" href="#">
     <i class="fas fa-bars"></i>
@@ -165,6 +91,17 @@
             <img class="img-fluid" src="img/desmos.jpg" alt="">
           </a>
         </div>
+        <div class="col-lg-6">
+          <a class="portfolio-item" href="/TheEvolutionOfComputers">
+            <span class="caption">
+              <span class="caption-content">
+                <h2>The Evolution</h2>
+                <p class="mb-0">Of Computers</p>
+              </span>
+            </span>
+            <img class="img-fluid" src="img/hg1.png" alt="">
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -180,7 +117,7 @@
         </li>
       </ul>
       <p class="text-muted small mb-0">Copyright &copy; shantanuaryan67 2019</p>
-      <p class="text-muted small mb-0">Photo by Cody Davis on Unsplash</p>
+      <p class="text-muted small mb-0">Hero Image by Samuel Zeller on Unsplash</p>
     </div>
   </footer>
 
@@ -198,6 +135,72 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
+
+
+
+    <script type="text/javascript">
+        function clickCounter() {
+            if (typeof(Storage) !== "undefined") {
+                if (localStorage.clickcount) {
+                    if (Number(localStorage.clickcount)<255){
+                        localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                        document.getElementById("clicks").innerHTML = "shantanuaryan" + Number(localStorage.clickcount).toString(16).toUpperCase();
+                    } else {
+                        localStorage.colorcount = colorgen();
+                        document.documentElement.style.setProperty('--customcolor', localStorage.colorcount);
+                        themechanger();
+                    }
+                } else {
+                    localStorage.clickcount = 104;
+                    document.getElementById("clicks").innerHTML = "shantanuaryan" + Number(localStorage.clickcount).toString(16).toUpperCase();
+                }
+            } else {
+                document.getElementById("clicks").innerHTML = "shantanuaryan67";
+                document.documentElement.style.setProperty('--customcolor', colorgen());
+                themechanger();
+            }
+        }
+
+        function colorgen() {
+            var possible = "0123456789ABCDEF";
+            var cg='#'
+            for (var i = 0; i < 6; i++){
+                cg += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+            return cg;
+        }
+
+        function colorChanger() {
+            if (typeof(Storage) !== "undefined") {
+                if (localStorage.colorcount) {
+                    document.documentElement.style.setProperty('--customcolor', localStorage.colorcount);
+                } else {
+                    document.documentElement.style.setProperty('--customcolor', colorgen());
+                }
+            } else {
+                document.documentElement.style.setProperty('--customcolor', colorgen());
+            }
+            themechanger();
+        }
+
+        function reset() {
+            localStorage.clear();
+            document.documentElement.style.setProperty('--customcolor', colorgen());
+            document.getElementById("clicks").innerHTML = "shantanuaryan67";
+            themechanger();
+        }
+
+        function getcolorvalue() {
+            //return document.documentElement.style.getProperty('--customcolor');
+            return getComputedStyle(document.documentElement).getPropertyValue('--customcolor');
+        }
+
+        function themechanger() {
+            var metaThemeColor = document.querySelector("meta[name=theme-color]");
+            metaThemeColor.setAttribute("content", getcolorvalue());
+            //metaThemeColor.content=getcolorvalue();
+        }
+    </script>
 
 </body>
 
